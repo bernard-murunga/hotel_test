@@ -28,7 +28,7 @@ class ContentsController extends Controller
               'image_upload' => 'mimes:jpeg,bmp,png'
             ]
           );
-          Input::file('image_upload')->move('images'.'attractions.jpg');
+          Input::file('image_upload')->move('images','attractions.jpg');
           return redirect('/');
         }
         return view('contents/upload', $data);
